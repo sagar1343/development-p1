@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-rounded {
+            font-variation-settings:
+                "FILL" 0,
+                "wght" 400,
+                "GRAD" 0,
+                "opsz" 24;
+            font-size: 20px;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fafafa] min-h-screen font-sans text-neutral-900">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-10">
+        <header class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-8">
+            <div>
+                <p class="text-xs sm:text-sm tracking-wide text-neutral-400 font-medium mb-1">MAR 24</p>
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900">
+                    Customers
+                </h1>
+            </div>
+            <div class="w-full sm:w-72">
+                <div class="relative flex items-center">
+                    <span class="material-symbols-rounded absolute left-4 text-neutral-400">search</span>
+                    <input id="search" type="text" placeholder="Search customers..."
+                        class="w-full pl-11 pr-4 py-3 rounded-2xl border border-neutral-200 bg-white text-sm placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-orange-300" />
+                </div>
+            </div>
+        </header>
+
+        <section class="w-full overflow-x-auto">
+            <table class="w-full border-separate border-spacing-y-3 min-w-[640px]">
+                <thead>
+                    <tr class="text-left text-sm text-neutral-400">
+                        <th scope="col" class="font-normal px-6 pb-3 w-1/4">Name</th>
+                        <th scope="col" class="font-normal px-6 pb-3 w-1/4">Company</th>
+                        <th scope="col" id="campaigns-sort" class="font-normal px-6 pb-3 w-1/5 cursor-pointer">Campaigns
+                        </th>
+                        <th scope="col" class="font-normal px-6 pb-3 w-1/5">Spent, $</th>
+                        <th scope="col" class="font-normal px-6 pb-3 w-10"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            Joel Anderson
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">ProPeak</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">6</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">20,852</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            Marcus Sullivan
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">Etero</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">11</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">28,745</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            Aiden Mitchell
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">Emagnum</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">9</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">19,820</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            Isabella Donovan
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">Project Pulse</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">8</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">35,214</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            John Carter
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">Arcbay</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">10</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">22,315</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            Ethan Gallagher
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">Vitalverve</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">7</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">14,562</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            Grace Robinson
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">Quantum</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">10</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">13,310</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            Charlotte Hayes
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">Learnloom</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">12</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">16,540</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr
+                        class="group bg-white border border-neutral-200 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 hover:border-transparent hover:shadow-sm hover:shadow-orange-200 transition-colors cursor-pointer">
+                        <td class="px-6 py-4 rounded-l-2xl font-semibold text-neutral-900 group-hover:text-white">
+                            Matthew Kim
+                        </td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">ZenithWell</td>
+                        <td class="px-6 py-4 text-neutral-700 group-hover:text-white/90">4</td>
+                        <td class="px-6 py-4 text-neutral-900 group-hover:text-white">10,937</td>
+                        <td class="px-6 py-4 rounded-r-2xl text-right">
+                            <button type="button"
+                                class="delete-btn text-neutral-400 hover:text-neutral-600 group-hover:text-white/80 group-hover:hover:text-white">
+                                <span class="material-symbols-rounded">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="pagination" class="mt-4 flex justify-center items-center">
+            <button id="prevBtn" class="px-4 py-2 bg-neutral-200 rounded-lg">Prev</button>
+            <span id="pageNumber" class="w-[30px] text-center">1</span>
+            <button id="nextBtn" class="px-4 py-2 bg-neutral-200 rounded-lg">Next</button>
+        </section>
+        <ul id="users-list"></ul>
+    </main>
+    <script src="/dashboard.js"></script>
+</body>
+
+</html>
